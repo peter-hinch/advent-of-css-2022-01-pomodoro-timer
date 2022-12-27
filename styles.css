@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+@font-face {
+  font-family: 'Bebas Neue - Book';
+  src: url('./fonts/bebasneue-book-webfont.woff'), format('woff');
+}
+
 body {
   display: flex;
   justify-content: center;
@@ -29,6 +36,10 @@ section#timer {
   position: absolute;
   top: 9px;
   left: 9px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 500px;
   height: 500px;
   background: radial-gradient(
@@ -37,13 +48,42 @@ section#timer {
     #17171a 100%
   );
   box-shadow: inset 0px 0px 114px rgba(0, 0, 0, 0.45);
+  border-radius: 50%;
 }
 
 .face__countdown {
 }
 
+span.countdown__time-remaining {
+  color: #fff;
+  font-family: 'Bebas Neue - Book', sans-serif;
+  font-weight: 400;
+  font-size: 196px;
+  line-height: 196px;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
 button.face__button-start-stop {
+  margin: 23px 0;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19.5px;
+  letter-spacing: 0.6em;
+  text-transform: uppercase;
 }
 
 button.face__button-settings {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: url('./images/gear.svg') center no-repeat;
 }
